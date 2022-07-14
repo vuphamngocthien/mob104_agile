@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF3F3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DonHangActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_DH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đơn mua"
+        android:textSize="30dp"
+        android:textColor="#F53649"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcl_donhang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="284dp"
+        android:layout_marginTop="30dp"
+        tools:layout_editor_absoluteY="224dp"
+        android:layout_below="@+id/toolbar_DH"/>
+</RelativeLayout>

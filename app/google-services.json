@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "469150847143",
+    "project_id": "duan1-3cc8b",
+    "storage_bucket": "duan1-3cc8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469150847143:android:ae59a2455724d3f7a54b82",
+        "android_client_info": {
+          "package_name": "com.example.duan_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469150847143-fhj8l0a23a2u76ktloilpk3sbcdfoo69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLq3KjOfdIXHfuPjuub5WhhF73YJasTm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469150847143-fhj8l0a23a2u76ktloilpk3sbcdfoo69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469150847143:android:ef7711793d83d856a54b82",
+        "android_client_info": {
+          "package_name": "com.example.duantest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469150847143-fhj8l0a23a2u76ktloilpk3sbcdfoo69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLq3KjOfdIXHfuPjuub5WhhF73YJasTm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469150847143-fhj8l0a23a2u76ktloilpk3sbcdfoo69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

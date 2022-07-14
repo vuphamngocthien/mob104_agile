@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF3F3"
+    tools:context=".DangKyActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="46sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="41dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/dang_ky"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="105dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/tao_tai_khoan"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="360dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/rectangle"
+        android:hint="@string/username"/>
+
+    <EditText
+        android:id="@+id/editTextHoTen"
+        android:layout_width="360dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="235dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/rectangle"
+        android:hint="@string/ho_ten"/>
+
+    <EditText
+        android:id="@+id/editTextPass"
+        android:layout_width="360dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:fontFamily="@font/nunito"
+        android:password="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/rectangle"
+        android:hint="@string/password"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:fontFamily="@font/nunito"
+        android:layout_width="360dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="385dp"
+        android:background="@drawable/rectangle"
+        android:layout_marginLeft="25dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="360dp"
+        android:fontFamily="@font/nunito"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="450dp"
+        android:layout_centerHorizontal="true"
+        android:text="Bằng cách tiếp tục, bạn xác nhận rằng bạn đã đọc và đồng ý với các Điều khoản và Điều kiện và Chính sách Bảo mật của chúng tôi."
+        android:textAlignment="center" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="520dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonDangky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dangky"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/facebook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="620dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ban_co_tai_khoan"
+        android:layout_marginTop="690dp"
+        />
+
+    <TextView
+        android:id="@+id/textviewDangNhap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dang_nhap"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="710dp"
+        />
+</RelativeLayout>

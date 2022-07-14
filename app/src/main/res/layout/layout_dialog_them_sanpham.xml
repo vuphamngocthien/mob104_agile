@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_layout_themsp">
+
+    <ImageView
+        android:id="@+id/im_loadSP"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/amgadd"
+        android:layout_marginLeft="120dp"/>
+
+    <EditText
+        android:id="@+id/ed_tenSP"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:gravity="center"
+        android:background="@drawable/custom_layout_themsp"
+        android:hint="Nhập tên sản phẩm"
+        android:fontFamily="@font/nunito"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/im_loadSP"
+        android:layout_marginLeft="60dp"/>
+
+    <EditText
+        android:id="@+id/ed_giaSP"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:fontFamily="@font/nunito"
+        android:inputType="number"
+        android:hint="Nhập Giá"
+        android:background="@drawable/custom_layout_themsp"
+        android:layout_below="@+id/ed_tenSP"
+        android:layout_marginLeft="60dp"/>
+
+    <EditText
+        android:id="@+id/ed_mota"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nhập mô tả"
+        android:gravity="center"
+        android:background="@drawable/custom_layout_themsp"
+        android:fontFamily="@font/nunito"
+        android:layout_below="@+id/ed_giaSP"
+        android:layout_marginLeft="60dp"/>
+
+
+    <Spinner
+        android:id="@+id/spinner_Loai"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/ed_mota"
+        android:background="@drawable/custom_layout_themsp"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginLeft="60dp"/>
+
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#F4485A"
+        android:text="Thêm"
+        android:layout_below="@+id/spinner_Loai" />
+
+    <Button
+        android:id="@+id/btnHuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_Loai"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#F4485A"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="20dp"
+        android:text="Hủy" />
+
+</RelativeLayout>

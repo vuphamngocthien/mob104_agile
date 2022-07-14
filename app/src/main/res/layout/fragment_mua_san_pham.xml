@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF3F3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MuaSanPhamFragment">
+
+    <EditText
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Tìm kiếm sản phẩm"
+        android:layout_marginLeft="15dp"
+        android:paddingLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcl_SanPham"
+        android:layout_width="match_parent"
+        android:layout_height="713dp"
+        android:layout_marginTop="80dp"
+        android:background="#F6F5F5"
+        android:paddingRight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>

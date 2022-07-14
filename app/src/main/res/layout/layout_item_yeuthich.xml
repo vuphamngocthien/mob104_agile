@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/layout_yeuthich"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:background="@drawable/mask"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/im_avtYT"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        tools:srcCompat="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/tv_tenYT"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="172dp"
+        android:lines="2"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_giatYT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:fontFamily="@font/nunito"
+        android:textColor="#F53649"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_soluongYT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="150dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/im_avtDH"
+        android:layout_below="@+id/tv_giatien"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icons8_heart"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="150dp"/>
+
+    <ImageView
+        android:id="@+id/im_dlYT"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_baseline_delete_24"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="80dp"
+        />
+</androidx.cardview.widget.CardView>

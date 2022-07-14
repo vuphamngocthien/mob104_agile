@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:background="@color/white">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#F53649"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"/>
+    <ImageView
+        android:id="@+id/im_spGiohang"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/checkBox"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_tenSPGH"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="ten san pham"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:fontFamily="@font/nunito"
+        android:textStyle="bold"
+        android:lines="2"
+        android:layout_toRightOf="@+id/im_spGiohang"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tv_giaSPGH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gia san pham"
+        android:textColor="#F53649"
+        android:textSize="15dp"
+        android:fontFamily="@font/nunito"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/im_spGiohang"
+        android:layout_below="@+id/tv_tenSPGH"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/im_giam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/im_spGiohang"
+        android:layout_below="@+id/tv_giaSPGH"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:text="1"
+            android:gravity="center"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/im_giam"
+            android:layout_below="@+id/tv_giaSPGH"/>
+    <ImageView
+        android:id="@+id/im_tang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_value"
+        android:layout_below="@+id/tv_giaSPGH"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icons8_add_32"
+        android:layout_marginBottom="10dp"/>
+
+
+    
+</RelativeLayout>

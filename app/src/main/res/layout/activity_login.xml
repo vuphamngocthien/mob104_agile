@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF3F3"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="46sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="41dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/dang_nhap"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="360dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nunito"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:background="@drawable/rectangle"
+        android:hint="@string/username"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="360dp"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_marginTop="235dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:password="true"
+        android:background="@drawable/rectangle"
+        android:hint="@string/password"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="300dp"
+        android:textSize="14sp"
+        android:layout_marginLeft="240dp"
+        android:text="@string/ban_co_tai_khoan"/>
+
+    <Switch
+        android:id="@+id/active"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="302dp"
+        android:gravity="end"
+        android:text="Remeber me" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:background="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dangnhap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ban_khong_tai_khoan"
+        android:layout_marginTop="590dp"
+        />
+
+    <TextView
+        android:id="@+id/textviewDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dang_ky"
+        android:fontFamily="@font/nunito"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="610dp"
+        />
+</RelativeLayout>

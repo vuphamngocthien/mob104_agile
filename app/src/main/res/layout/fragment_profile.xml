@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileFragment">
+
+    <TextView
+        android:id="@+id/tvbackg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"/>
+
+    <ImageView
+        android:id="@+id/im2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-50dp"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/oval1" />
+
+    <ImageView
+        android:id="@+id/im3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/oval2" />
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        />
+    <TextView
+        android:id="@+id/tv_gmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="abc@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/tv_hello" />
+
+    <ImageView
+        android:id="@+id/im_giaohang"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/group6" />
+    <ImageView
+        android:id="@+id/im_tailai"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/group7"
+        android:layout_toRightOf="@+id/im_giaohang"/>
+    <ImageView
+        android:id="@+id/im_magiamgia"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/group5"
+        android:layout_toRightOf="@+id/im_tailai"/>
+    <ImageView
+        android:id="@+id/im_yeuthich"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/group4"
+        android:layout_toRightOf="@+id/im_magiamgia"/>
+    <TextView
+        android:id="@+id/tvgh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giao hàng"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/im_giaohang"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tvtailai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng xuất"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/im_giaohang"
+        android:layout_toRightOf="@+id/tvgh"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvmagiamgia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã giảm giá"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/im_giaohang"
+        android:layout_toRightOf="@+id/tvtailai"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tvyeuthich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yêu thích"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/im_giaohang"
+        android:layout_toRightOf="@+id/tvmagiamgia"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:id="@+id/ln1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/tvbackg">
+        <TextView
+            android:id="@+id/youracc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tài khoản của bạn"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:textStyle="bold"
+            android:layout_below="@+id/tvbackg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <ListView
+            android:id="@+id/lv_profile1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/youracc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ln1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvcaidat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            />
+            <ListView
+                android:id="@+id/lv_profile2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvcaidat"
+                android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/botton_loaisp"
+        android:title="Loại sản phẩm"
+        android:icon="@drawable/ic_baseline_menu_24"/>
+
+    <item android:id="@+id/bottom_home"
+        android:title="Trang chủ"
+        android:icon="@drawable/ic_baseline_apps_24"/>
+
+    <item android:id="@+id/bottom_yeuthich"
+        android:title="Yêu thích"
+        android:icon="@drawable/ic_baseline_favorite_24"/>
+
+    <item android:id="@+id/botton_cn"
+        android:title="Tôi"
+        android:icon="@drawable/user"/>
+</menu>

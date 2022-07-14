@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GitHub/DUAN1_TeamVy/app/src/main/res/drawable/custom_layout_themsp.xml" value="0.124" />
+        <entry key="..\:/GitHub/DUAN1_TeamVy/app/src/main/res/layout/fragment_them_san_pham.xml" value="0.12284701114488349" />
+        <entry key="..\:/GitHub/DUAN1_TeamVy/app/src/main/res/layout/layout_dialog_them_sanpham.xml" value="0.13405797101449277" />
+        <entry key="..\:/GitHub/DUAN1_TeamVy/app/src/main/res/layout/layout_item_sanpham.xml" value="0.13405797101449277" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

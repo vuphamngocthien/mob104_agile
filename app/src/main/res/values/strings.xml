@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DUAN_1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!--    Layout dang ky-->
+    <string name="dang_ky">Đăng ký</string>
+    <string name="tao_tai_khoan">Tạo tài khoản</string>
+    <string name="username">Số điện thoại hoặc gmail</string>
+    <string name="ho_ten">Họ tên</string>
+    <string name="password">Mật khẩu</string>
+    <string name="ban_co_tai_khoan">Bạn đã có tài khoản?</string>
+    <string name="dang_nhap">Đăng nhập</string>
+
+    <!--    Layout Login-->
+    <string name="ban_quen_mk">Quên mật khẩu?</string>
+    <string name="ban_khong_tai_khoan">Bạn không có tài khoản?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
