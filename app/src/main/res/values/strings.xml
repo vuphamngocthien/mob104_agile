@@ -25,4 +25,6 @@
     <string name="ban_khong_tai_khoan">Bạn không có tài khoản?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="web_client_id">"469150847143-fhj8l0a23a2u76ktloilpk3sbcdfoo69.apps.googleusercontent.com"</string>
 </resources>

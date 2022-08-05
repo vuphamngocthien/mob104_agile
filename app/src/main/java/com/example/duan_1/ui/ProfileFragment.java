@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,18 +23,33 @@ import com.example.duan_1.R;
 
 import java.util.ArrayList;
 
+import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.OptionalPendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.firebase.auth.FirebaseAuth;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements GoogleApiClient.OnConnectionFailedListener {
     ListView lv_Pf1,lv_pf2;
     ListProfileAdapter adapter1;
     ListProfile2Adapter adapter2;
     ArrayList<ListProfile1> mListPF1;
     ArrayList<ListProfile2> mListPF2;
     ImageView im_tailai;
+
+    private GoogleApiClient googleApiClient;
+    private GoogleSignInOptions gso;
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -45,11 +61,30 @@ public class ProfileFragment extends Fragment {
         lv_pf2 = view.findViewById(R.id.lv_profile2);
         im_tailai = view.findViewById(R.id.im_tailai);
 
+        gso =  new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        googleApiClient=new GoogleApiClient.Builder(getActivity())
+                .enableAutoManage(getActivity(),this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
+                .build();
+
         im_tailai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getContext(), DangKyActivity.class);
-                startActivity(i);
+                FirebaseAuth.getInstance().signOut();
+                Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(
+                        new ResultCallback<Status>() {
+                            @Override
+                            public void onResult(Status status) {
+                                if (status.isSuccess()){
+                                    gotoMainActivity();
+                                }else{
+                                    Toast.makeText(getActivity(),"Session not close",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
             }
         });
         //danh sách các mục trong tài khoản
@@ -94,4 +129,39 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        OptionalPendingResult<GoogleSignInResult> opr= Auth.GoogleSignInApi.silentSignIn(googleApiClient);
+        if(opr.isDone()){
+            GoogleSignInResult result=opr.get();
+            handleSignInResult(result);
+        }else{
+            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
+                @Override
+                public void onResult(@NonNull GoogleSignInResult googleSignInResult) {
+                    handleSignInResult(googleSignInResult);
+                }
+            });
+        }
+    }
+    private void handleSignInResult(GoogleSignInResult result){
+        if(result.isSuccess()){
+            GoogleSignInAccount account=result.getSignInAccount();
+
+        }else{
+            gotoMainActivity();
+        }
+    }
+    private void gotoMainActivity(){
+        Intent intent=new Intent(getContext(),LoginActivity.class);
+        startActivity(intent);
+    }
+
 }

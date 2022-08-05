@@ -38,15 +38,16 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
         />
+
     <TextView
         android:id="@+id/tv_gmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hello"
+        android:layout_marginLeft="50dp"
         android:text="abc@gmail.com"
         android:textColor="@color/black"
-        android:textSize="15dp"
-        android:layout_marginLeft="50dp"
-        android:layout_below="@+id/tv_hello" />
+        android:textSize="15dp" />
 
     <ImageView
         android:id="@+id/im_giaohang"
@@ -55,14 +56,15 @@
         android:layout_marginTop="120dp"
         android:layout_marginLeft="40dp"
         android:src="@drawable/group6" />
+
     <ImageView
         android:id="@+id/im_tailai"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="120dp"
         android:layout_marginLeft="30dp"
-        android:src="@drawable/group7"
-        android:layout_toRightOf="@+id/im_giaohang"/>
+        android:layout_marginTop="120dp"
+        android:layout_toRightOf="@+id/im_giaohang"
+        android:src="@drawable/group7" />
     <ImageView
         android:id="@+id/im_magiamgia"
         android:layout_width="60dp"

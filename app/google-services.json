@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "469150847143",
+    "firebase_url": "https://duan1-3cc8b-default-rtdb.firebaseio.com",
     "project_id": "duan1-3cc8b",
     "storage_bucket": "duan1-3cc8b.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "469150847143-22fspo62747bjvjae4infbqo5i7av7bm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.duan_1",
+            "certificate_hash": "252da1b3ac1bf9023bdb741b86f851e836135583"
+          }
+        },
         {
           "client_id": "469150847143-fhj8l0a23a2u76ktloilpk3sbcdfoo69.apps.googleusercontent.com",
           "client_type": 3
