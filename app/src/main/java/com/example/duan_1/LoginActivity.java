@@ -1,12 +1,6 @@
 package com.example.duan_1;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
-
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,8 +10,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+
 import com.example.duan_1.ApdapterModel.SanPhamAdapter;
-import com.example.duan_1.Model.User;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -42,6 +39,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private EditText username, password;
     private AppCompatButton login;
     private SignInButton google_login;
+    private Button btnThu;
     TextView tvDangKy;
     Switch active;
 
@@ -62,6 +60,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         login = findViewById(R.id.login);
         tvDangKy = findViewById(R.id.textviewDangKy);
         active = findViewById(R.id.active);
+        btnThu = findViewById(R.id.btnThu);
 
         firebaseAuth = com.google.firebase.auth.FirebaseAuth.getInstance();
         //this is where we start the Auth state Listener to listen for whether the user is signed in or not
@@ -101,6 +100,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
                 startActivityForResult(intent,RC_SIGN_IN);
             }
+        });
+
+        btnThu.setOnClickListener(View ->{
+            startActivity(new Intent(LoginActivity.this, ThuAcitivity.class));
         });
 
         tvDangKy.setOnClickListener(new View.OnClickListener() {

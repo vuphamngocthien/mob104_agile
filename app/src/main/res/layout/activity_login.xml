@@ -61,6 +61,7 @@
         android:text="Remeber me" />
 
     <ImageView
+        android:id="@+id/iv_login"
         android:layout_width="300dp"
         android:layout_height="2dp"
         android:background="@drawable/line"
@@ -71,14 +72,19 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:background="@drawable/dangnhap"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="470dp"/>
+        android:layout_below="@id/iv_login"/>
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_below="@+id/login"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -98,6 +104,14 @@
         android:fontFamily="@font/nunito"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:layout_marginTop="610dp"
-        />
+        android:layout_marginTop="610dp" />
+
+    <Button
+        android:id="@+id/btnThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/textviewDangKy"
+        android:layout_centerHorizontal="true"
+        android:text="Thu chi"/>
 </RelativeLayout>
