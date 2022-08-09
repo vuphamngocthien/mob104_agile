@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.CombinedChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -41,6 +42,7 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
     Spinner spinner;
     private PieChart chart_tongThu, chart_tongChi;
     CardView cv_thu, cv_chi;
+    private BarChart barChart_tongThu;
 
     TextView tv_tongThuChi, tv_tongThu, tv_tongChi, tv_cardview_thu, tv_cardview_chi;
     @Override
@@ -89,40 +91,24 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
                 String position = adapterView.getItemAtPosition(i).toString();
                 switch (position) {
                     case "Tất cả":
-                        tv_tongThuChi.setVisibility(View.VISIBLE);
-                        tv_tongThu.setVisibility(View.VISIBLE);
-                        tv_tongChi.setVisibility(View.VISIBLE);
-                        cv_thu.setVisibility(View.VISIBLE);
-                        cv_chi.setVisibility(View.VISIBLE);
-                        chart_tongThu.setVisibility(View.VISIBLE);
-                        chart_tongChi.setVisibility(View.VISIBLE);
+                        showThuChi();
+                        showThu();
+                        showChi();
                         break;
                     case "Tổng thu chi":
-                        tv_tongThuChi.setVisibility(View.VISIBLE);
-                        tv_tongThu.setVisibility(View.GONE);
-                        tv_tongChi.setVisibility(View.GONE);
-                        cv_thu.setVisibility(View.VISIBLE);
-                        cv_chi.setVisibility(View.VISIBLE);
-                        chart_tongThu.setVisibility(View.GONE);
-                        chart_tongChi.setVisibility(View.GONE);
+                        showThuChi();
+                        hideThu();
+                        hideChi();
                         break;
                     case "Tổng doanh thu":
-                        tv_tongThuChi.setVisibility(View.GONE);
-                        tv_tongThu.setVisibility(View.VISIBLE);
-                        tv_tongChi.setVisibility(View.GONE);
-                        cv_thu.setVisibility(View.GONE);
-                        cv_chi.setVisibility(View.GONE);
-                        chart_tongThu.setVisibility(View.VISIBLE);
-                        chart_tongChi.setVisibility(View.GONE);
+                        hideThuChi();
+                        showThu();
+                        hideChi();
                         break;
                     case "Tổng chi phí":
-                        tv_tongThuChi.setVisibility(View.GONE);
-                        tv_tongThu.setVisibility(View.GONE);
-                        tv_tongChi.setVisibility(View.VISIBLE);
-                        cv_thu.setVisibility(View.GONE);
-                        cv_chi.setVisibility(View.GONE);
-                        chart_tongThu.setVisibility(View.GONE);
-                        chart_tongChi.setVisibility(View.VISIBLE);
+                        hideThuChi();
+                        hideThu();
+                        showChi();
                         break;
 
                 }
@@ -154,6 +140,38 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
 
     }
 
+    private void showThuChi(){
+        tv_tongThuChi.setVisibility(View.VISIBLE);
+        cv_thu.setVisibility(View.VISIBLE);
+        cv_chi.setVisibility(View.VISIBLE);
+    }
+
+    private void hideThuChi(){
+        tv_tongThuChi.setVisibility(View.GONE);
+        cv_thu.setVisibility(View.GONE);
+        cv_chi.setVisibility(View.GONE);
+    }
+
+    private void showThu(){
+        tv_tongThu.setVisibility(View.VISIBLE);
+        chart_tongThu.setVisibility(View.VISIBLE);
+    }
+
+    private void hideThu() {
+        tv_tongThu.setVisibility(View.GONE);
+        chart_tongThu.setVisibility(View.GONE);
+    }
+
+    private void showChi(){
+        tv_tongChi.setVisibility(View.VISIBLE);
+        chart_tongChi.setVisibility(View.VISIBLE);
+    }
+
+    private void hideChi(){
+        tv_tongChi.setVisibility(View.GONE);
+        chart_tongChi.setVisibility(View.GONE);
+    }
+
     /* Lọc thống kê:
      _ Theo tháng
      _ Theo loại sản phẩm
@@ -166,7 +184,7 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
     // pie chart
     private void generateTongThu(){
 
-        chart_tongThu.setRotationEnabled(false);
+        chart_tongThu.setRotationEnabled(true);
         chart_tongThu.setDescription(new Description());
         chart_tongThu.setHoleRadius(40f);
         chart_tongThu.setTransparentCircleAlpha(0);
@@ -216,7 +234,7 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
     // pie chart : Luong nv, luong thuong, VAT / tổng chi phí
     private void generateChiPhi(){
 
-        chart_tongChi.setRotationEnabled(false);
+        chart_tongChi.setRotationEnabled(true);
         chart_tongChi.setDescription(new Description());
         chart_tongChi.setHoleRadius(40f);
         chart_tongChi.setTransparentCircleAlpha(0);
@@ -242,7 +260,7 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
 
         ArrayList<Integer> colors=new ArrayList<>();
         colors.add(Color.LTGRAY);
-        colors.add(Color.BLUE);
+        colors.add(Color.GREEN);
 
         pieDataSet.setColors(colors);
 

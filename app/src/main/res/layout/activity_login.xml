@@ -110,8 +110,7 @@
         android:id="@+id/btnThu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/textviewDangKy"
+        android:layout_below="@+id/google_login"
         android:layout_centerHorizontal="true"
-        android:text="Thu chi"/>
+        android:text="Thu chi" />
 </RelativeLayout>
