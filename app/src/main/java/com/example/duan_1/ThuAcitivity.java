@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +43,9 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
     Spinner spinner;
     private PieChart chart_tongThu, chart_tongChi;
     CardView cv_thu, cv_chi;
-    private BarChart barChart_tongThu;
+
+    int pageHeight = 1120;
+    int pagewidth = 792;
 
     TextView tv_tongThuChi, tv_tongThu, tv_tongChi, tv_cardview_thu, tv_cardview_chi;
     @Override
@@ -120,10 +123,6 @@ public class ThuAcitivity extends AppCompatActivity implements OnChartValueSelec
             }
         });
 
-
-
-
-        // mChart.setVisibility(View.GONE);
 
     }
 

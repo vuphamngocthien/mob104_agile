@@ -61,30 +61,13 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.OnConne
         lv_pf2 = view.findViewById(R.id.lv_profile2);
         im_tailai = view.findViewById(R.id.im_tailai);
 
-        gso =  new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        googleApiClient=new GoogleApiClient.Builder(getActivity())
-                .enableAutoManage(getActivity(),this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
-                .build();
-
         im_tailai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(
-                        new ResultCallback<Status>() {
-                            @Override
-                            public void onResult(Status status) {
-                                if (status.isSuccess()){
-                                    gotoMainActivity();
-                                }else{
-                                    Toast.makeText(getActivity(),"Session not close",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
+                Intent intent = new Intent(getActivity().getApplication(), LoginActivity.class);
+                startActivity(intent);
+
             }
         });
         //danh sách các mục trong tài khoản
@@ -133,35 +116,6 @@ public class ProfileFragment extends Fragment implements GoogleApiClient.OnConne
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        OptionalPendingResult<GoogleSignInResult> opr= Auth.GoogleSignInApi.silentSignIn(googleApiClient);
-        if(opr.isDone()){
-            GoogleSignInResult result=opr.get();
-            handleSignInResult(result);
-        }else{
-            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
-                @Override
-                public void onResult(@NonNull GoogleSignInResult googleSignInResult) {
-                    handleSignInResult(googleSignInResult);
-                }
-            });
-        }
-    }
-    private void handleSignInResult(GoogleSignInResult result){
-        if(result.isSuccess()){
-            GoogleSignInAccount account=result.getSignInAccount();
-
-        }else{
-            gotoMainActivity();
-        }
-    }
-    private void gotoMainActivity(){
-        Intent intent=new Intent(getContext(),LoginActivity.class);
-        startActivity(intent);
     }
 
 }
